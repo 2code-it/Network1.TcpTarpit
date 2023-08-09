@@ -1,0 +1,10 @@
+This program is used to host tcp tarpitting endpoints.
+example: Network1.TcpTarpitApp.exe -a 192.168.12.21 -p 2000-3000,5001 -d 400 -b 3 -l ./logs -r ./bogus.txt -m 600
+options: 
+	-a Listen address, ipaddress format e.g. 192.168.12.21
+	-p Ports, a comma separated string of ports and/or port ranges e.g. 2000,3000,4000-4020,5000
+	-d (optional) Iteration delay in ms, default: 200
+	-b (optional) Bytes per iteration, default: 1
+	-l (optional) Connection log directory, path to directory to store connection logs, default: null (nolog)
+	-r (optional) Response data file, path to a file containing response data, default: null (random bytes)
+	-m (optional) Max connection time in seconds, default: 0 (infinite)
